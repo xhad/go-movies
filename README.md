@@ -38,10 +38,10 @@ zip deployment.zip main
 Use the AWS CCLI to create a new lambda function:
 ```
 aws lambda create-function \
---region us-east-1 \
+--region ap-northeast-1 \
 --function-name DiscoverMovies \
 --zip-file fileb://./deployment.zip \
 --runtime go1.x \
---role arn:aws:iam::<account-id>:role/<role> \
+--role arn:aws:iam::$account_id:role/$role \
 --handler main
 ```

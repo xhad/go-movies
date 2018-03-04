@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  GoMovies:
+    Type: AWS::Lambda::Function
+    Properties: 
+      Code:
+        ./deployment.zip
+      DeadLetterConfig:
+        DeadLetterConfig
+      Description: Controller to Retrieve Movies
+      Environment:
+        Variables:
+          S3_BUCKET: go_movies
+      FunctionName: String
+      Handler: String
+      KmsKeyArn: String
+      MemorySize: Integer
+      ReservedConcurrentExecutions: Integer
+      Role: !GetAtt [ LambdaExecutionRole, Arn ]
+      Runtime: go1.x
+      Timeout: "25"
+      TracingConfig:
+        TracingConfig
+      VpcConfig:
+        VPCConfig
+      Tags: 
+        Resource Tag

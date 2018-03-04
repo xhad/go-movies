@@ -1,6 +1,5 @@
 package main
 
-
 import (
 	"encoding/json"
 	"errors"
@@ -31,10 +30,10 @@ type MovieDBResponse struct {
 
 // Movie object stucture
 type Movie struct {
-	Title		string `json:"title"`
-	Description	string `json:"overview"`
-	Cover		string `json:"poster_path"`
-	ReleaseDate	string `json:"release_date"`
+	Title       string `json:"title"`
+	Description string `json:"overview"`
+	Cover       string `json:"poster_path"`
+	ReleaseDate string `json:"release_date"`
 }
 
 // Handler takes movie_genre paramater, returns MovieDB query
